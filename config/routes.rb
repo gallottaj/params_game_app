@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   # verb "/urls" => "namespace/controllers#action"
   namespace :api do
     get '/add_params' => 'numbers#add_new_param'
+    get '/url_segment/:the_message' => 'numbers#segment_method'
    end
 end
 
