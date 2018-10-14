@@ -7,14 +7,20 @@ class Api::NumbersController < ApplicationController
 
   def segment_guess
     user_guess = params[my_guess].to_i
-    if @number == 36
-      @number = "you're right!"
-    elsif @number > 36
-      @number = "too high"
-    else @number < 36
-      @number = "too low"
+
+    if user_guess == 36
+      @message = "you're right!"
+    elsif user_guess > 36
+      @message = "too high"
+    else user_guess < 36
+      @message = "too low"
     end
      render "the_segment.json.jbuilder"
+  end
+
+  def body_method
+    
+  render "the_body.json.jbuilder"
   end
 
 end

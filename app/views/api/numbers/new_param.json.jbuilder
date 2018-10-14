@@ -1,1 +1,1 @@
-json.message @number
+json.message @my_guess

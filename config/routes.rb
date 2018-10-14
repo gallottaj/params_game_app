@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   namespace :api do
     get '/add_params' => 'numbers#add_new_param'
     get '/url_segment/:my_guess' => 'numbers#segment_guess'
+    post '/body_params' => 'numbers#body_method'
    end
 end
 
